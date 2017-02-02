@@ -1,0 +1,19 @@
+---
+#
+# Installing Nginx
+#
+
+# Install Nginx
+- name: Update repositories cache and install Nginx
+  apt:
+    name: nginx
+    update_cache: yes
+
+# Deploy kibana.conf with FQDN
+- name: Setup Nginx reverse proxy for kibana
+  template:
+    src={{ templateFile }}.j2
+    dest=/etc/nginx/sites-available/{{ siteName }}
+    owner=nignx
+    group=nignx
+    mode=0644

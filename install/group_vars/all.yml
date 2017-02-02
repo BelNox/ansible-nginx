@@ -1,0 +1,31 @@
+---
+
+# The Nginx Vhost file name
+siteName: cloud
+
+# The port that the relay listens to
+listenPort: 80
+
+# The dns entry that Nginx must listen to
+serverName: lnx-relay
+
+# The URL that Nginx must listen to
+location: cloud.lnx-tech.com
+
+# The protocol that will be used when forwarding to the destination. Usually just /
+templateFile: httpsSiteFile
+
+# The destination hostname
+destHost: lnx-cloud
+
+# The destination listening port
+destPort: 80
+
+
+
+# location lines for Kibana
+#        proxy_http_version 1.1;
+#        proxy_set_header Upgrade $http_upgrade;
+#        proxy_set_header Connection 'upgrade';
+#        proxy_set_header Host $host;
+#        proxy_cache_bypass $http_upgrade;
