@@ -1,0 +1,10 @@
+---
+#
+# Playbook to install the ELK stack
+#
+- hosts: nginx
+  remote_user: bel
+  become: yes
+  become_user: root
+  roles:
+    - { role: dns }

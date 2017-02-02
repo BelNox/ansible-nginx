@@ -1,0 +1,48 @@
+---
+
+# The global domain
+domain: lnx-tech.com
+
+# NS01
+ns1IP: 10.0.5.20
+ns1DNS: ns1
+
+# NS02
+ns2IP: 10.0.5.21
+ns2DNS: ns2
+
+# Host 1
+hosts:
+  hostIP:
+    host1: 10.0.5.25
+    host2: 10.0.5.26
+    host3: 10.0.5.27
+    host4: 10.0.5.28
+    host5: 10.0.5.29
+    host6: 10.0.5.30
+    host7: 10.0.5.31
+    host8: 10.0.5.32
+
+# The dns entry that Nginx must listen to
+serverName: lnx-relay
+
+# The URL that Nginx must listen to
+location: cloud.lnx-tech.com
+
+# The protocol that will be used when forwarding to the destination. Usually just /
+templateFile: httpsSiteFile
+
+# The destination hostname
+destHost: lnx-cloud
+
+# The destination listening port
+destPort: 80
+
+
+
+# location lines for Kibana
+#        proxy_http_version 1.1;
+#        proxy_set_header Upgrade $http_upgrade;
+#        proxy_set_header Connection 'upgrade';
+#        proxy_set_header Host $host;
+#        proxy_cache_bypass $http_upgrade;

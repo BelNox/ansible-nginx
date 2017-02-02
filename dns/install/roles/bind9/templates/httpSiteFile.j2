@@ -1,0 +1,9 @@
+server {
+    listen {{ listenPort }};
+
+    server_name {{ serverName }};
+
+    location {{ location }} {
+        proxy_pass http://{{ destHost }}:{{ destPort }};
+    }
+}
