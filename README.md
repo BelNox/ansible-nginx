@@ -1,5 +1,4 @@
-# The Nginx Ansible Collection
+# LNX Ansible Collection
 
-## Install Nginx
+### Nginx
 
-## Add Site Playbook
