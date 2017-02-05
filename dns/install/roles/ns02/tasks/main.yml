@@ -31,7 +31,7 @@
     name: bind9
     state: reloaded
     daemon_reload: yes
-  notify: restart bind9
+
 
 # Start bind9 service
 - name: Starting bind9 service
@@ -39,4 +39,3 @@
     name: bind9
     state: started
     daemon_reload: yes
-  notify: start bind9
