@@ -2,9 +2,10 @@
 #
 # Playbook to install the ELK stack
 #
-- hosts: nginx
-  remote_user: bel
+- hosts: ns01
+  remote_user: matt
   become: yes
   become_user: root
   roles:
-    - { role: dns }
+    - { role: bind9Install }
+    - { role: ns01 }

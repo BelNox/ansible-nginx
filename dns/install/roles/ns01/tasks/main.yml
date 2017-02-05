@@ -1,0 +1,66 @@
+---
+#
+# Install Bind DNS for NS01
+#
+
+# Create named.conf.options file
+- name: Creating named.conf.options file
+  template:
+    src=named.conf.options.j2
+    dest=/etc/bind/named.conf.options
+    owner={{ bindUser }}
+    group={{ bindUser }}
+    mode=0644
+
+
+# Create named.conf.local file
+- name: Creating named.conf.local file
+  template:
+    src=named.conf.local.j2
+    dest=/etc/bind/named.conf.local
+    owner={{ bindUser }}
+    group={{ bindUser }}
+    mode=0644
+
+# create /etc/bind/zones directory
+- name: Create zones directory
+  file: path=/etc/bind/zones
+    state=directory
+    mode=0755
+
+# Create NS01 db file on NS01
+- name: Creating db.{{ domain }} file on NS01
+  template:
+    src=db.ns01.j2
+    dest=/etc/bind/zones/db.{{ domain }}
+    owner={{ bindUser }}
+    group={{ bindUser }}
+    mode=0644
+
+# Create NS02 db file
+- name: Creating db.{{ IPArpa }} file on NS01
+  template:
+    src=db.reverse.ns01.j2
+    dest=/etc/bind/zones/db.{{ IPArpa }}
+    owner={{ bindUser }}
+    group={{ bindUser }}
+    mode=0644
+
+# Check named-conf files
+- name: Exec named-checkconf
+  shell: named-checkconf
+
+# Check named-conf files for domian
+- name: Exec named-checkzone against domain
+  shell: named-checkzone {{ domain }} db.{{ domain }}
+
+# Check named-conf files for reverse
+- name: Exec named-checkzone against reverse
+  shell: named-checkzone {{ reverseIPArpa }}.in-addr.arpa /etc/bind/zones/db.{{ IPArpa }}
+
+# Restart Bind
+- name: Restart Bind
+  systemd:
+    name: bind9
+    state: restarted
+    daemon_reload: yes

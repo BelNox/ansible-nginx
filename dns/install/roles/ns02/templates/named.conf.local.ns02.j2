@@ -1,0 +1,11 @@
+zone "{{ domain }}" {
+    type slave;
+    file "slaves/db.{{ domain }}"; # zone file path
+    masters { {{ ns1IP }}; };           # ns1 private IP address - secondary
+};
+
+zone "{{ IPArpa }}.in-addr.arpa" {
+    type slave;
+    file "slaves/db.{{ reverseIPArpa }}";  # 10.128.0.0/16 subnet
+    masters { {{ ns1IP }}; };  # ns1 private IP address - secondary
+};

@@ -1,0 +1,23 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     {{ domain }}. admin.{{ domain }}. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+        IN      NS      {{ ns1DNS }}.{{ domain }}.
+        IN      NS      {{ ns2DNS }}.{{ domain }}.
+
+; name servers - NS record
+{{ ns1DNS }}.{{ domain }}.  IN      A       {{ ns1IP }}
+{{ ns2DNS }}.{{ domain }}.  IN      A       {{ ns2IP }}
+
+; Inludian - A records
+
+{% for id in range({{ minIP }},{{ maxIP }}) %}
+  hosts[hostDNS].host{{ id }}.{{ domain }}. IN      A       hosts[hostIP].host{{ id }};
+{% endfor %}

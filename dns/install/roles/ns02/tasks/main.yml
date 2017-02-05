@@ -1,0 +1,26 @@
+---
+#
+# Install Bind DNS for NS02
+#
+
+# Create named.conf.options for NS02
+- name: Create named.conf.options for NS02
+  template:
+    src=named.conf.options.ns02.j2
+    dest=/etc/bind/named.conf.options
+    owner={{ bindUser }}
+    group={{ bindUser }}
+    mode=0644
+
+# Create named.conf.local file for NS02
+- name: Creating named.conf.local file for NS02
+  template:
+    src=named.conf.local.ns02.j2
+    dest=/etc/bind/named.conf.local
+    owner={{ bindUser }}
+    group={{ bindUser }}
+    mode=0644
+
+# Check named-conf files
+- name: Exec named-checkconf
+  shell: named-checkconf

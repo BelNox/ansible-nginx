@@ -3,25 +3,107 @@
 # The global domain
 domain: lnx-tech.com
 
+IPArpa: 10.0
+reverseIPArpa: 0.10
 # NS01
-ns1IP: 10.0.5.20
+ns1IP: 10.0.5.24
 ns1DNS: ns1
 
 # NS02
-ns2IP: 10.0.5.21
+ns2IP: 10.0.5.23
 ns2DNS: ns2
+
+minIP: 1
+maxIP: 35
+
+forward01: 10.0.5.1
+forward02: 192.168.88.1
+forward03: 8.8.8.8
+
+bindUser: root
 
 # Host 1
 hosts:
   hostIP:
-    host1: 10.0.5.25
-    host2: 10.0.5.26
-    host3: 10.0.5.27
-    host4: 10.0.5.28
-    host5: 10.0.5.29
-    host6: 10.0.5.30
-    host7: 10.0.5.31
-    host8: 10.0.5.32
+    host1: 10.0.5.1
+    host2: 10.0.5.2
+    host3: 10.0.5.3
+    host4: 10.0.5.4
+    host5: 10.0.5.5
+    host6: 10.0.5.6
+    host7: 10.0.5.7
+    host8: 10.0.5.8
+    host9: 10.0.5.9
+    host10: 10.0.5.10
+    host11: 10.0.5.11
+    host12: 10.0.5.12
+    host13: 10.0.5.13
+    host14: 10.0.5.14
+    host15: 10.0.5.25
+    host16: 10.0.5.26
+    host17: 10.0.5.27
+    host18: 10.0.5.28
+    host19: 10.0.5.29
+    host20: 10.0.5.30
+    host21: 10.0.5.31
+    host22: 10.0.5.32
+    host23: 10.0.5.33
+    host24: 10.0.5.34
+    host25: 10.0.5.35
+  hostDNS:
+    host1: router
+    host2: drobo
+    host3: duo
+    host4: fusion-m
+    host5: fusion
+    host6: fusion
+    host7: force-m
+    host8: force
+    host9: force
+    host10: nutrino-m
+    host11: nutrino
+    host12: nutrino
+    host13: thorium
+    host14: thorium
+    host15: lnx-unify
+    host16: lnx-plex
+    host17: lnx-download
+    host18: lnx-cache
+    host19: web01
+    host20: forum
+    host21: cloud
+    host22: ts
+    host23: vpn
+    host24: git
+    host25: ansible
+  hostPTR:
+    host1: 1.5
+    host2: 2.5
+    host3: 3.5
+    host4: 4.5
+    host5: 5.5
+    host6: 6.5
+    host7: 7.5
+    host8: 8.5
+    host9: 9.5
+    host10: 10.5
+    host11: 11.5
+    host12: 12.5
+    host13: 13.5
+    host14: 14.5
+    host15: 25.5
+    host16: 26.5
+    host17: 27.5
+    host18: 28.5
+    host19: 29.5
+    host20: 30.5
+    host21: 31.5
+    host22: 32.5
+    host23: 33.5
+    host24: 34.5
+    host25: 35.5
+
+
 
 # The dns entry that Nginx must listen to
 serverName: lnx-relay
