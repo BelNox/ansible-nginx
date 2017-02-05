@@ -1,10 +1,11 @@
+
 ---
 #
-# Installing Nginx
+# Installing Bind DNS
 #
 
-# Install Nginx
-- name: Update repositories cache and install Nginx
+# Install Bind DNS
+- name: Install Bind DNS
   apt:
     name: bind9 bind9utils bind9-doc
     update_cache: yes
@@ -14,7 +15,6 @@
   systemd:
     name: bind9
     enabled: yes
-
 
 # Start bind9 service
 - name: Starting bind9 service
