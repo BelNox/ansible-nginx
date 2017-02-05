@@ -1,0 +1,12 @@
+---
+#
+# Playbook to install the ELK stack
+#
+
+- hosts: aptcache
+  remote_user: matt
+  become: yes
+  become_user: root
+  roles:
+    - { role: cache }
+    - { role: aptUpgrade }

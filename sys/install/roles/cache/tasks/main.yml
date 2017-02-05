@@ -1,0 +1,14 @@
+
+---
+#
+# Setup Apt-Cache
+#
+
+# deploy basic nginx.conf 8080 vhost
+- name: Creating cache file
+  template:
+    src=cache.j2
+    dest=/etc/apt/apt.conf.d/00aptproxy
+    owner=root
+    group=root
+    mode=0644

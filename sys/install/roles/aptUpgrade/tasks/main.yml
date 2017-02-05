@@ -1,0 +1,11 @@
+
+---
+#
+# Update all
+#
+
+# Update all APT
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+    update_cache: yes
