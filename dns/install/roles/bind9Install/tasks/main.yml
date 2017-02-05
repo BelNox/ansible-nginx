@@ -6,14 +6,20 @@
 # Install Nginx
 - name: Update repositories cache and install Nginx
   apt:
-    name: nginx
+    name: bind9 bind9utils bind9-doc
     update_cache: yes
 
-# Deploy kibana.conf with FQDN
-- name: Setup Nginx reverse proxy for kibana
-  template:
-    src={{ templateFile }}.j2
-    dest=/etc/nginx/sites-available/{{ siteName }}
-    owner=nignx
-    group=nignx
-    mode=0644
+# Enable bind9 service
+- name: Enabling bind9 service
+  systemd:
+    name: bind9
+    enabled: yes
+  notify: enable bind9
+
+# Start bind9 service
+- name: Starting bind9 service
+  systemd:
+    name: bind9
+    state: started
+    daemon_reload: yes
+  notify: start bind9
