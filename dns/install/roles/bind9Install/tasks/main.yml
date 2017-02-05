@@ -7,8 +7,12 @@
 # Install Bind DNS
 - name: Install Bind DNS
   apt:
-    name: bind9 bind9utils bind9-doc
+    name: {{item}}
     update_cache: yes
+    with_items:
+        - bind9
+        - bind9utils
+        - bind9-doc
 
 # Enable bind9 service
 - name: Enabling bind9 service
