@@ -8,5 +8,5 @@
   become: yes
   become_user: root
   roles:
-    - { role: bind9Install }
-#    - { role: ns01 }
+#    - { role: bind9Install }
+    - { role: ns01 }
