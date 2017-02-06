@@ -19,6 +19,6 @@ $TTL    604800
 
 ; Inludian - A records
 
-{% for name, ip in sorted(hosts.iteritems()) %}
+{% for name, ip in hosts.iteritems()|sort(attribute='value') %}
 {{ name }}.{{ domain }}.    IN      A      {{ ip }};
 {% endfor %}
