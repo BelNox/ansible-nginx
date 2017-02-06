@@ -21,7 +21,7 @@ forward01: 8.8.8.8
 forward02: 8.8.4.4
 forward03: 10.11.12.1
 
-bindUser: root
+bindUser: bel
 
 # Host 1
 hosts:
