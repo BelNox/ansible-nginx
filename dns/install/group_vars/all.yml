@@ -25,24 +25,26 @@ bindUser: bel
 
 # Host 1
 hosts:
-  - name: router
-    ip: 10.0.5.1
-    arpa: 1.5
-  - name: ant
-    ip: 10.0.5.2
-    arpa: 2.5
-  - name: bear
-    ip: 10.0.5.3
-    arpa: 3.5
-  - name: drom
-    ip: 10.0.5.4
-    arpa: 4.5
-  - name: face
-    ip: 10.0.5.5
-    arpa: 5.5
+  router: 10.0.5.1
+  ant: 10.0.5.2
+  bear: 10.0.5.3
+  crab: 10.0.5.4
+  drom: 10.0.5.5
+  ether: 10.0.5.6
+  face: 10.0.5.7
+
+arpa:
+  router: 1.5
+  ant: 2.5
+  bear: 3.5
+  crab: 4.5
+  drom: 5.5
+  ether: 6.5
+  face: 7.5
 
 
-host2: 10.0.5.2
+
+host2:
   host3: 10.0.5.3
   host4: 10.0.5.4
   host5: 10.0.5.5
