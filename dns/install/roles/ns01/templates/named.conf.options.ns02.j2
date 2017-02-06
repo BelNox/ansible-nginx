@@ -2,8 +2,8 @@ acl "trusted" {
         {{ ns1IP }};    # ns1 - can be set to localhost
         {{ ns2IP }};    # ns2
 
-        {% for id in range({{ minIP | int }},{{ maxIP | int }},{{ minIP | int }},{{ maxIP | int }}) %}
-          10.0.5.{{ id }};
+        {% for id in range({{ minIP | int }},{{ maxIP | int }}) %}
+        10.0.5.{{ id }};\n
         {% endfor %}
 
 
