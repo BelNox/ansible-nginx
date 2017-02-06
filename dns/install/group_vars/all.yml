@@ -25,9 +25,24 @@ bindUser: root
 
 # Host 1
 hosts:
-  hostIP:
-    host1: 10.0.5.1
-    host2: 10.0.5.2
+  - name: router
+    ip: 10.0.5.1
+  - name: ant
+    ip: 10.0.5.2
+  - name: bear
+    ip: 10.0.5.3
+  - name: crap
+    ip: 10.0.5.4
+  - name: drom
+    ip: 10.0.5.5
+  - name: ether
+    ip: 10.0.5.6
+  - name: face
+    ip: 10.0.5.7
+
+
+
+  host2: 10.0.5.2
     host3: 10.0.5.3
     host4: 10.0.5.4
     host5: 10.0.5.5
