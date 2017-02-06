@@ -3,7 +3,7 @@ acl "trusted" {
         {{ ns2IP }};    # ns2
 
         {% for id in range((minIP | int), (maxIP | int)) %}
-        10.0.5.{{ id }};\n
+        10.0.5.{{ id }};
         {% endfor %}
 
 
