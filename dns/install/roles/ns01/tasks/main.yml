@@ -53,7 +53,7 @@
 
 # Check named-conf files for domian
 - name: Exec named-checkzone against domain
-  shell: named-checkzone {{ domain }} db.{{ domain }}
+  shell: named-checkzone {{ domain }} /etc/bind/zones/db.{{ domain }}
 
 # Check named-conf files for reverse
 - name: Exec named-checkzone against reverse
