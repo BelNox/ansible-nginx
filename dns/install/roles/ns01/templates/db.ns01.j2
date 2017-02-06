@@ -14,8 +14,8 @@ $TTL    604800
         IN      NS      {{ ns2DNS }}.{{ domain }}.
 
 ; name servers - NS record
-    {{ ns1DNS }}.{{ domain }}.  IN      A       {{ ns1IP }}
-    {{ ns2DNS }}.{{ domain }}.  IN      A       {{ ns2IP }}
+{{ ns1DNS }}.{{ domain }}.  IN      A       {{ ns1IP }}
+{{ ns2DNS }}.{{ domain }}.  IN      A       {{ ns2IP }}
 
 ; Inludian - A records
 
