@@ -25,96 +25,91 @@ bindUser: root
 
 # Host 1
 hosts:
-  - name: router
-    ip: 10.0.5.1
-  - name: ant
-    ip: 10.0.5.2
-  - name: bear
-    ip: 10.0.5.3
-  - name: crap
-    ip: 10.0.5.4
-  - name: drom
-    ip: 10.0.5.5
-  - name: ether
-    ip: 10.0.5.6
-  - name: face
-    ip: 10.0.5.7
+  router: 10.0.5.1
+  ant: 10.0.5.2
+  bear: 10.0.5.3
+  crab: 10.0.5.4
+  drom: 10.0.5.5
+  ether: 10.0.5.6
+  face: 10.0.5.7
 
 
 
-  host2: 10.0.5.2
-    host3: 10.0.5.3
-    host4: 10.0.5.4
-    host5: 10.0.5.5
-    host6: 10.0.5.6
-    host7: 10.0.5.7
-    host8: 10.0.5.8
-    host9: 10.0.5.9
-    host10: 10.0.5.10
-    host11: 10.0.5.11
-    host12: 10.0.5.12
-    host13: 10.0.5.13
-    host14: 10.0.5.14
-    host15: 10.0.5.25
-    host16: 10.0.5.26
-    host17: 10.0.5.27
-    host18: 10.0.5.28
-    host19: 10.0.5.29
-    host20: 10.0.5.30
-    host21: 10.0.5.31
-    host22: 10.0.5.32
-    host23: 10.0.5.33
-    host24: 10.0.5.34
-    host25: 10.0.5.35
-  hostDNS:
-    host1: router
-    host2: drobo
-    host3: duo
-    host4: fusion-m
-    host5: fusion
-    host6: fusion
-    host7: force-m
-    host8: force
-    host9: force
-    host10: nutrino-m
-    host11: nutrino
-    host12: nutrino
-    host13: thorium
-    host14: thorium
-    host15: lnx-unify
-    host16: lnx-plex
-    host17: lnx-download
-    host18: lnx-cache
-    host19: web01
-    host20: forum
-    host21: cloud
-    host22: ts
-    host23: vpn
-    host24: git
-    host25: ansible
-  hostPTR:
-    host1: 1.5
-    host2: 2.5
-    host3: 3.5
-    host4: 4.5
-    host5: 5.5
-    host6: 6.5
-    host7: 7.5
-    host8: 8.5
-    host9: 9.5
-    host10: 10.5
-    host11: 11.5
-    host12: 12.5
-    host13: 13.5
-    host14: 14.5
-    host15: 25.5
-    host16: 26.5
-    host17: 27.5
-    host18: 28.5
-    host19: 29.5
-    host20: 30.5
-    host21: 31.5
-    host22: 32.5
-    host23: 33.5
-    host24: 34.5
-    host25: 35.5
+host2: 10.0.5.2
+  host3: 10.0.5.3
+  host4: 10.0.5.4
+  host5: 10.0.5.5
+  host6: 10.0.5.6
+  host7: 10.0.5.7
+  host8: 10.0.5.8
+  host9: 10.0.5.9
+  host10: 10.0.5.10
+  host11: 10.0.5.11
+  host12: 10.0.5.12
+  host13: 10.0.5.13
+  host14: 10.0.5.14
+  host15: 10.0.5.25
+  host16: 10.0.5.26
+  host17: 10.0.5.27
+  host18: 10.0.5.28
+  host19: 10.0.5.29
+  host20: 10.0.5.30
+  host21: 10.0.5.31
+  host22: 10.0.5.32
+  host23: 10.0.5.33
+  host24: 10.0.5.34
+  host25: 10.0.5.35
+
+hostDNS:
+  host1: router
+  host2: drobo
+  host3: duo
+  host4: fusion-m
+  host5: fusion
+  host6: fusion
+  host7: force-m
+  host8: force
+  host9: force
+  host10: nutrino-m
+  host11: nutrino
+  host12: nutrino
+  host13: thorium
+  host14: thorium
+  host15: lnx-unify
+  host16: lnx-plex
+  host17: lnx-download
+  host18: lnx-cache
+  host19: web01
+  host20: forum
+  host21: cloud
+  host22: ts
+  host23: vpn
+  host24: git
+  host25: ansible
+
+hostPTR:
+  host1: 1.5
+  host2: 2.5
+  host3: 3.5
+  host4: 4.5
+  host5: 5.5
+  host6: 6.5
+  host7: 7.5
+  host8: 8.5
+  host9: 9.5
+  host10: 10.5
+  host11: 11.5
+  host12: 12.5
+  host13: 13.5
+  host14: 14.5
+  host15: 25.5
+  host16: 26.5
+  host17: 27.5
+  host18: 28.5
+  host19: 29.5
+  host20: 30.5
+  host21: 31.5
+  host22: 32.5
+  host23: 33.5
+  host24: 34.5
+  host25: 35.5
