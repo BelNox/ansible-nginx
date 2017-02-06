@@ -18,6 +18,6 @@ $TTL    604800
 
 ; Inludian - A records
 
-{% for id in range({{ minIP }},{{ maxIP }}) %}
-  hosts[hostDNS].host{{ id }}.{{ domain }}. IN      A       hosts[hostIP].host{{ id }};
+{% for id in range(1,35) %}
+hosts[hostDNS].host{{ id }}.{{ domain }}. IN      A       hosts[hostIP].host{{ id }};\n
 {% endfor %}
