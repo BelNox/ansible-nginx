@@ -15,6 +15,6 @@ $TTL    604800
 ;
 
 ; PTR Records
-{% for id in range({{ minIP }},{{ maxIP }}) %}
+{% for id in range({{ minIP | int }},{{ maxIP | int }},{{ minIP | int }},{{ maxIP | int }}) %}
   hosts[hostPTR].host{{ id }}   IN    PTR    hosts[hostDNS].host{{ id }}.  ;hosts[hostIP].host{{ id }}
 {% endfor %}
