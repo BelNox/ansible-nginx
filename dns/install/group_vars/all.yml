@@ -4,8 +4,8 @@
 # The global domain
 domain: inludian.com
 
-IPArpa: 10.0
-reverseIPArpa: 0.10
+IPArpa: "10.0"
+reverseIPArpa: "0.10"
 # NS01
 ns1IP: 10.11.13.136
 ns1DNS: ns1
@@ -14,8 +14,8 @@ ns1DNS: ns1
 ns2IP: 10.11.13.158
 ns2DNS: ns2
 
-minIP: 1
-maxIP: 35
+minIP: "1"
+maxIP: "35"
 
 forward01: 8.8.8.8
 forward02: 8.8.4.4
