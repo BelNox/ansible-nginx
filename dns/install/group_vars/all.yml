@@ -2,24 +2,24 @@
 ---
 
 # The global domain
-domain: lnx-tech.com
+domain: inludian.com
 
 IPArpa: 10.0
 reverseIPArpa: 0.10
 # NS01
-ns1IP: 10.0.5.24
+ns1IP: 10.11.13.136
 ns1DNS: ns1
 
 # NS02
-ns2IP: 10.0.5.23
+ns2IP: 10.11.13.158
 ns2DNS: ns2
 
 minIP: 1
 maxIP: 35
 
-forward01: 10.0.5.1
-forward02: 192.168.88.1
-forward03: 8.8.8.8
+forward01: 8.8.8.8
+forward02: 8.8.4.4
+forward03: 10.11.12.1
 
 bindUser: root
 
@@ -103,29 +103,3 @@ hosts:
     host23: 33.5
     host24: 34.5
     host25: 35.5
-
-
-
-# The dns entry that Nginx must listen to
-serverName: lnx-relay
-
-# The URL that Nginx must listen to
-location: cloud.lnx-tech.com
-
-# The protocol that will be used when forwarding to the destination. Usually just /
-templateFile: httpsSiteFile
-
-# The destination hostname
-destHost: lnx-cloud
-
-# The destination listening port
-destPort: 80
-
-
-
-# location lines for Kibana
-#        proxy_http_version 1.1;
-#        proxy_set_header Upgrade $http_upgrade;
-#        proxy_set_header Connection 'upgrade';
-#        proxy_set_header Host $host;
-#        proxy_cache_bypass $http_upgrade;
