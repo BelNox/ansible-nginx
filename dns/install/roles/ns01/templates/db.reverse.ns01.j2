@@ -15,8 +15,8 @@ $TTL    604800
 ;
 
 ; PTR Records
-{{ ns1IP }}     IN      PTR     {{ ns1DNS }}.{{ domain }}.
-{{ ns1IP }}     IN      PTR     {{ ns1DNS }}.{{ domain }}.
+{{ ns1ARP }}     IN      PTR     {{ ns1DNS }}.{{ domain }}.
+{{ ns2ARP }}     IN      PTR     {{ ns2DNS }}.{{ domain }}.
 {% for name, ip in arpa.iteritems()|sort %}
 {{ ip }}        IN      PTR     {{ name }}.{{ domain }}.
 {% endfor %}
