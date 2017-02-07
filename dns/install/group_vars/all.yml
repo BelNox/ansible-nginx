@@ -2,126 +2,78 @@
 ---
 
 # The global domain
-domain: inludian.com
+domain: lnx-tech.com
 
-IPArpa: "10.0"
+IPArpa: "10.0" #10.0.5.0/24
 reverseIPArpa: "0.10"
+
 # NS01
-ns1IP: 10.11.13.136
+ns1IP: 10.0.5.23
 ns1DNS: ns1
-ns1ARP: "136.13"
+ns1ARP: "23.5"
 
 # NS02
-ns2IP: 10.11.13.158
+ns2IP: 10.0.5.24
 ns2DNS: ns2
-ns2ARP: "158.13"
-
-minIP: 1
-maxIP: 35
+ns2ARP: "24.5"
 
 forwardars:
-    forward01: 8.8.8.8
-    forward02: 8.8.4.4
-    forward03: 10.11.12.1
+    forward01: 192.168.88.1
+    forward02: 8.8.8.8
 
-bindUser: bel
+bindUser: matt
 
 # Host 1
 hosts:
   router: 10.0.5.1
-  ant: 10.0.5.2
-  bear: 10.0.5.3
-  crab: 10.0.5.4
-  drom: 10.0.5.5
-  ether: 10.0.5.6
-  face: 10.0.5.7
+  drobo: 10.0.5.2
+  duo: 10.0.5.3
+  fusion-m: 10.0.5.4
+  fusion: 10.0.5.5
+  fusion: 10.0.5.6
+  force-m: 10.0.5.7
+  force: 10.0.5.8
+  force: 10.0.5.9
+  nutrino-m: 10.0.5.10
+  nutrino: 10.0.5.11
+  nutrino: 10.0.5.12
+  thorium: 10.0.5.13
+  thorium: 10.0.5.14
+  lnx-unify: 10.0.5.25
+  lnx-plex: 10.0.5.26
+  lnx-download: 10.0.5.27
+  lnx-cache: 10.0.5.28
+  web01: 10.0.5.29
+  forum: 10.0.5.30
+  cloud: 10.0.5.31.5
+  ts: 10.0.5.32
+  vpn: 10.0.5.33
+  git: 10.0.5.34
+  ansible: 10.0.5.35
 
 arpa:
   router: 1.5
-  ant: 2.5
-  bear: 3.5
-  crab: 4.5
-  drom: 5.5
-  ether: 6.5
-  face: 7.5
-
-
-
-host2:
-  host3: 10.0.5.3
-  host4: 10.0.5.4
-  host5: 10.0.5.5
-  host6: 10.0.5.6
-  host7: 10.0.5.7
-  host8: 10.0.5.8
-  host9: 10.0.5.9
-  host10: 10.0.5.10
-  host11: 10.0.5.11
-  host12: 10.0.5.12
-  host13: 10.0.5.13
-  host14: 10.0.5.14
-  host15: 10.0.5.25
-  host16: 10.0.5.26
-  host17: 10.0.5.27
-  host18: 10.0.5.28
-  host19: 10.0.5.29
-  host20: 10.0.5.30
-  host21: 10.0.5.31
-  host22: 10.0.5.32
-  host23: 10.0.5.33
-  host24: 10.0.5.34
-  host25: 10.0.5.35
-
-hostDNS:
-  host1: router
-  host2: drobo
-  host3: duo
-  host4: fusion-m
-  host5: fusion
-  host6: fusion
-  host7: force-m
-  host8: force
-  host9: force
-  host10: nutrino-m
-  host11: nutrino
-  host12: nutrino
-  host13: thorium
-  host14: thorium
-  host15: lnx-unify
-  host16: lnx-plex
-  host17: lnx-download
-  host18: lnx-cache
-  host19: web01
-  host20: forum
-  host21: cloud
-  host22: ts
-  host23: vpn
-  host24: git
-  host25: ansible
-
-hostPTR:
-  host1: 1.5
-  host2: 2.5
-  host3: 3.5
-  host4: 4.5
-  host5: 5.5
-  host6: 6.5
-  host7: 7.5
-  host8: 8.5
-  host9: 9.5
-  host10: 10.5
-  host11: 11.5
-  host12: 12.5
-  host13: 13.5
-  host14: 14.5
-  host15: 25.5
-  host16: 26.5
-  host17: 27.5
-  host18: 28.5
-  host19: 29.5
-  host20: 30.5
-  host21: 31.5
-  host22: 32.5
-  host23: 33.5
-  host24: 34.5
-  host25: 35.5
+  drobo: 2.5
+  duo: 3.5
+  fusion-m: 4.5
+  fusion: 5.5
+  fusion: 6.5
+  force-m: 7.5
+  force: 8.5
+  force: 9.5
+  nutrino-m: 10.5
+  nutrino: 11.5
+  nutrino: 12.5
+  thorium: 13.5
+  thorium: 14.5
+  lnx-unify: 25.5
+  lnx-plex: 26.5
+  lnx-download: 27.5
+  lnx-cache: 28.5
+  web01: 29.5
+  forum: 30.5
+  cloud: 31.5
+  ts: 32.5
+  vpn: 33.5
+  git: 34.5
+  ansible: 35.5
