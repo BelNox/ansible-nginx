@@ -1,0 +1,10 @@
+auto lo
+iface lo inet loopback
+
+auto {{ interfaceName }}
+iface {{ interfaceName }} inet static
+        address {{ address }}
+        netmask {{ netmask }}
+        gateway {{ gateway }}
+        {% for name, ip in forwardars.iteritems()|sort %}dns-nameservers {{ ip }}{% endfor %}
+        dns-search {{ dns-search }}

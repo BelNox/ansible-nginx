@@ -2,3 +2,18 @@
 
 # EPEL Repository for extra packages
 cache_ip: 10.0.5.28
+
+# Static Network
+interfaceName: ens0
+
+address: 10.0.5.36
+
+netmask: 255.255.255.0
+
+gateway: 10.0.5.1
+
+dns-search: lnx-tech.com
+
+forwardars:
+    ns01: 10.0.5.23
+    ns02: 10.0.5.24
