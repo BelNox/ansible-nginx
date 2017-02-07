@@ -9,6 +9,7 @@ $TTL    604800
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 
+; name servers - NS records
         IN      NS      {{ ns1DNS }}.{{ domain }}.
         IN      NS      {{ ns2DNS }}.{{ domain }}.
 
@@ -16,8 +17,8 @@ $TTL    604800
 {{ ns1DNS }}.{{ domain }}.  IN      A       {{ ns1IP }}
 {{ ns2DNS }}.{{ domain }}.  IN      A       {{ ns2IP }}
 
-; Inludian - A records
+; {{ domain }} - A records
 
-{% for id in range({{ minIP }},{{ maxIP }}) %}
-  hosts[hostDNS].host{{ id }}.{{ domain }}. IN      A       hosts[hostIP].host{{ id }};
+{% for name, ip in hosts.iteritems()|sort %}
+{{ name }}.{{ domain }}.        IN      A      {{ ip }};
 {% endfor %}

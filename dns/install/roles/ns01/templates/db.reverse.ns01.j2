@@ -16,5 +16,5 @@ $TTL    604800
 
 ; PTR Records
 {% for name, ip in arpa.iteritems()|sort %}
-    {{ ip }}   IN    PTR    {{ name }}.{{ domain }}.
+        {{ ip }}   IN    PTR    {{ name }}.{{ domain }}.
 {% endfor %}
