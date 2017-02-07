@@ -2,14 +2,11 @@ acl "trusted" {
     {{ ns1IP }};    # ns1 - can be set to localhost
     {{ ns2IP }};    # ns2
 
-    {% for id in range((minIP | int), (maxIP | int)) %}
-    10.0.5.{{ id }};
+    {% for name, ip in hosts.iteritems()|sort %}
+    {{ ip }};
     {% endfor %}
 
-
 };
-
-
 
 options {
     directory "/var/cache/bind";
@@ -20,11 +17,10 @@ options {
     allow-transfer { none; };      # disable zone transfers by default
 
     forwarders {
-          {{ forward01 }};
-          {{ forward02 }};
-          {{ forward03 }};
+    {% for name, ip in forwardars.iteritems()|sort %}
+    {{ ip }};
+    {% endfor %}
     };
-
 
     dnssec-validation auto;
 

@@ -7,7 +7,7 @@
 # Create named.conf.options for NS02
 - name: Create named.conf.options for NS02
   template:
-    src=named.conf.options.ns02.j2
+    src=named.conf.options.j2
     dest=/etc/bind/named.conf.options
     owner={{ bindUser }}
     group={{ bindUser }}
