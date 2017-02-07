@@ -9,10 +9,12 @@ reverseIPArpa: "0.10"
 # NS01
 ns1IP: 10.11.13.136
 ns1DNS: ns1
+ns1ARP: "136.13"
 
 # NS02
 ns2IP: 10.11.13.158
 ns2DNS: ns2
+ns2ARP: "158.13"
 
 minIP: 1
 maxIP: 35
