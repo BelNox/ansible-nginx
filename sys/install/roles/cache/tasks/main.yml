@@ -5,20 +5,10 @@
 #
 
 # deploy basic nginx.conf 8080 vhost
-- name: Creating named.conf.options file
-  template:
-    src=named.conf.options.j2
-    dest=/etc/bind/named.conf.options
-    owner=root
-    group=root
-    mode=0644
-
-
-# deploy basic nginx.conf 8080 vhost
 - name: Creating cache file
   template:
     src=cache.j2
-    dest=/etc/bind/named.conf.local
+    dest=/etc/apt/apt.conf.d/00aptcache
     owner=root
     group=root
     mode=0644
