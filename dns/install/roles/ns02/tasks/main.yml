@@ -16,7 +16,7 @@
 # Create named.conf.local file for NS02
 - name: Creating named.conf.local file for NS02
   template:
-    src=named.conf.local.ns02.j2
+    src=named.conf.local.j2
     dest=/etc/bind/named.conf.local
     owner={{ bindUser }}
     group={{ bindUser }}
